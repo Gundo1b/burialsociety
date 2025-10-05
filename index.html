@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burial Society Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="auth-container" class="auth-container"></div>
+      <div id="main-app" class="main-app" style="display: none;">
+        <nav class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <i class="fas fa-hands-helping"></i>
+            <h2>Burial Society</h2>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item active" data-page="dashboard">
+              <i class="fas fa-chart-line"></i>
+              <span>Dashboard</span>
+            </li>
+            <li class="nav-item" data-page="members">
+              <i class="fas fa-users"></i>
+              <span>Members</span>
+            </li>
+            <li class="nav-item" data-page="contributions">
+              <i class="fas fa-money-bill-wave"></i>
+              <span>Contributions</span>
+            </li>
+            <li class="nav-item" data-page="claims">
+              <i class="fas fa-file-invoice-dollar"></i>
+              <span>Claims</span>
+            </li>
+            <li class="nav-item" data-page="reports">
+              <i class="fas fa-file-alt"></i>
+              <span>Reports</span>
+            </li>
+            <li class="nav-item" data-page="notifications">
+              <i class="fas fa-bell"></i>
+              <span>Notifications</span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="main-content">
+          <header class="top-bar">
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-right">
+              <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+              </button>
+              <div class="user-profile">
+                <span id="userName">Admin</span>
+                <button class="btn-logout" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt"></i>
+                </button>
+              </div>
+            </div>
+          </header>
+
+          <main class="content-area" id="contentArea"></main>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
